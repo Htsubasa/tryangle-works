@@ -1123,12 +1123,13 @@ html body .contact .form .text-area .text-content {
 }
 
 html body .contact .form .btn_area {
-  background-color: #FFEB52;
+  background-color: #FFDB41;
   width: 240px;
   text-align: center;
   padding: 25px 90px;
   border-radius: 6px;
   margin: 0 auto;
+  font-weight: bold;
 }
 
 @media (max-width: 560px) {
@@ -1136,6 +1137,12 @@ html body .contact .form .btn_area {
     padding: 15px 40px;
     width: 180px;
   }
+}
+
+html body .contact .form .btn_area input {
+  letter-spacing: 1.2em;
+  font-size: 18px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 html body .price {
@@ -1488,7 +1495,7 @@ html body .price table .about-price .price-number {
 html body .price table .about-price .price-number .sub-price {
   font-size: 1.7vw;
   /*24*/
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: 0.075em;
 }
 
@@ -1617,7 +1624,7 @@ html body .note-responsive {
 }
 
 html body .footer {
-  background-image: url(../img/footer-background.png);
+  background-image: url(../img/bottom-background.png);
   background-size: cover;
   position: relative;
   padding-bottom: 90px;
@@ -1739,7 +1746,7 @@ html body .footer-inner .footer-nav ul li:hover {
 
 html body .footer-inner .footer-nav ul .f-nav-privacy {
   font-size: 20px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 @media (max-width: 1024px) {

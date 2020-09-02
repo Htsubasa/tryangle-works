@@ -329,10 +329,7 @@ header{
 
 .mainvisual{
   margin-bottom: 0px;
-  background-image: url(../img/whiteball.png);
-  background-position: 78vw 37vw;
-  padding-bottom: 60px;
-
+ 
   @include tab{
     margin-bottom: 60px;
     background-position: 67vw 27vw;
@@ -352,7 +349,7 @@ header{
     position: relative;
     height: 46vw;/*90vh*/
     box-shadow: 6px 6px 6px #00000029;
-    background-image: url(../img/sea.png);
+    background-image: url(../img/portrait.png);
     background-size: cover;
 
     @include pc{
@@ -541,259 +538,554 @@ header{
       background-color: rgba(0,0,0,0.4);
     width: 90%;
     height: 90%;
-    
   }/*warap-after*/
 
 }
 
 
-.contact{
-    margin-bottom: 138px;
 
-    @include sp{
-        margin-bottom: 110px;
+.career{
+
+  background-image: url(../img/whiteball.png);
+  background-position: 50px 77px;
+  padding-top: 60px;
+
+  @include tab{
+    background-position: 50px 10px;
+  }
+
+  .background-gray{
+    position: relative;
+    top: -60px;
+    @include tab{
+      top: -120px;
     }
 
-    &-box{
-        width: 576px;
-        border: 8px solid #FFDB41;
+
+    img{
+      position: absolute;
+      z-index: -1;
+
+      @include pc{
+        width: 600px;
+      }
+
+      @include tab{
+        width: 500px;
+      }
+
+      @include sp(){
+        width: 400px;
+      }
+
+
+      @include sp-second(){
+        width: 300px;
+      }
+
+    }
+
+  }
+
+
+  @include sp{
+  }
+
+  .background{
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+
+ @include sp{
+   width: 100%;
+  }
+
+
+
+
+
+    .yellow-name{
+      overflow: hidden;
+      position: absolute;
+      color: #FFDB41;
+      font-size: 163px;
+      @include font-type;
+      font-style: italic;
+      font-weight: 800;
+      writing-mode: vertical-rl;
+      right: -330px;
+      top: -60px;
+      z-index: -1;
+      height: 1000px;
+
+      opacity : 0;
+      transform : translate(0px, -300px);
+      transition : all 1.5s;
+
+      @include pc{
+        right: -135px;
+        font-size: 140px;
+      }
+     
+
+      @include tab{
+      font-size: 100px;
+      top: 550px;
+      right: 80px;
+      }
+
+      @include sp{
+        font-size: 70px;
+        top: 670px;
+        right: 10px;
+        height: 700px;
+      }
+
+ 
+
+    }/*yellow-name*/
+
+    .yellow-name.active{
+      opacity: 1;
+      transform : translate(0px, 0px);
+    }
+  }/*background*/
+  
+
+
+
+  &-wrapper{
+    width: 1010px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+
+    @include pc{
+      width: 740px;
+    }
+
+
+    @include tab{
+      display: block;
+      width: 100%;
+    }
+
+   
+
+
+    .career-intro{
+      width: 415px;
+      margin-top: 150px;
+
+      opacity : 0;
+      transform : translate(-250px, 0px);
+      transition : all 1.5s;
+
+
+      @include pc{
+        margin-top: 80px; 
+      }
+
+      @include tab{
         margin: 0 auto;
-        text-align: center;
-        padding-top: 57px;
-        padding-bottom: 57px;
+        width: 530px;
+      }
+
+      @include sp{
+        width: 90%;
+      }
+  
+
+      .corporate{
+        margin-bottom: 24.5px;
+        font-size: 17px;
+        @include font-type;
+        font-style: italic;    
+        font-weight: 600;
+      }
+
+      h3{
+        margin-bottom: 67px;
+        font-size: 36px;
+        letter-spacing: 0.4em;
+
+
+      @include pc{
         margin-bottom: 50px;
+      }
 
-        @include tab{
-            width: 530px;
-            padding-top: 47px;
-            padding-bottom: 47px;
-        }
+      @include sp-second{
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
 
-        @include sp{
-            width: 410px;
-            padding-top: 37px;
-            padding-bottom: 37px;
-        }
-
-        @include sp-second{
-            width: 300px;
-        }
+      }
 
 
-        p{
-            padding-bottom: 37px;
-            font-size: 14px;
-            letter-spacing: 0.025em;
+      h4{
+        font-size: 18px;
+        margin-bottom: 17.5px;
+        letter-spacing: 0.4em;
+        display: flex;
+        align-items: center;
 
-            @include sp-second{
-                padding-bottom: 27px;
-            }
+      }
 
-            .responsive-br{
-                display: none;
-
-                @include sp{
-                    display: initial;
-                }
-            }
-        
-        }
-
-        .list{
-            width: 415px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-
-            @include sp{
-                width: 330px;
-            }
-
-            @include sp-second{
-                width: 170px;
-                display: block;
-
-            }
-    
-
-            h3{
-                font-size: 22px;
-                position: relative;
-                letter-spacing: 0.1em;
-                
-                @include sp{
-                    font-size: 18px;
-                }
-
-                 @include sp-second(){
-                    text-align: left;
-                }
-    
-            }
-
-         
-            h3:before{
-                position: absolute;
-                content: "●";
-                color: #FFDB41;
-                top:11px;
-                left:-15px;
-                font-size: 10px;
-
-                @include sp{
-                    top:8px;
-                }
-
-                @include sp-second{
-                    top:6px;
-                }
-
-            }
-
-            .list-padding{
-                padding-right: 22px;
-
-                @include sp{
-                    padding-right: 20px;
-                }
-                @include sp-second(){
-                    padding-right: 0px;
-                }
-
-            }/*list-padding*/
-
-            
-
-        }/*list*/
-
-    }/*contact-box*/
+      h4:after {
+        border-top: 1px solid;
+        content: "";
+        flex-grow: 1;
+      }
 
 
-    .form{
-        width: 576px;
+
+      .intro{
+        margin-bottom: 42.5px;
+        font-size: 15px;
+        letter-spacing: 0.025em;
+        line-height: 2;
+      }
+    }/*career-intro*/
+
+    .career-intro.active{
+      opacity: 1;
+      transform : translate(0px, 0px);
+    }
+
+    .profile-img{
+
+      transform : translate(0, 50px);
+  transition : all 1.3s;
+  transform: scale(0.5);
+
+
+      @include tab{
+        width: 540px;
         margin: 0 auto;
+      }
+
+      @include sp{
+        width: 425px;
+      }
+
+      @include sp-second(){
+        width: 320px;
+      }
+
+      
+
+
+      img{
+        height: 854px;
+
+        @include pc{
+          height: 540px;
+          margin-top: 230px;
+        }
 
         @include tab{
-            width: 530px;
+          margin-top: 30px;
         }
 
         @include sp{
-            width: 410px;
+          width: 425px;
+          margin-top: 0px;
         }
 
-        @include sp-second{
-            width: 300px;
+        @include sp-second(){
+          width: 320px;
+          height: 430px;
+        }
+  
+
+
+      }/**/
+    }
+
+    .profile-img.active{
+      opacity: 1;
+      transform: translate(0, 0);  
+      transform: scale(1);    
+    }
+    
+
+
+  }/*wrapper*/
+}/*career*/
+
+
+
+
+.introduction{
+  margin-bottom: 200px;
+
+  @include sp{
+    margin-bottom: 150px;
+  }
+
+  &-wrap{
+    display: flex;
+    position: relative;
+
+    .introduction-img{
+      width: 47.5vw;
+      height: 37vw;
+      margin-top: 60px;
+
+      opacity : 0;
+      transform : translate(-350px, 0px);
+      transition : all 1.5s;
+
+
+      @include tab{
+        margin-top: 530px;
+        width: 70%;
+        height: 50%;
+      }
+
+      @include sp{
+        margin-top: 670px;
+        width: 95%;
+      }
+
+      @include sp-second(){
+        margin-top: 234vw;
+      }      
+    }
+
+    .introduction-img.active{
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    .wood-item{
+      background-image: url(../img/wood-background.png);
+      background-size: cover;
+      width:61.5vw;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      box-sizing: border-box;
+      height: auto;
+      padding: 5vw 12.5vw;
+      top: -5px;
+
+      opacity : 0;
+      transform : translate(350px, 0px);
+      transition : all 1.5s;
+
+      @include tab{
+        width: 95%;
+        padding: 8vw 7vw;
+      }
+
+      .item-box{
+        width: 43vw;
+
+      @include tab{
+        width: 100%;
+      }
+
+      @include sp{
+        width: 100%;
+      }
+
+      @include sp-second(){
+        width: 100%;
+      }
+
+ 
+
+      h3{
+        font-size: 30px;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 2.5vw;
+
+        @include tab{
+          font-size: 24px;
         }
 
+        @include sp-second(){
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+  
 
 
-        .text-area{
-            margin-bottom: 45px;
+      }/*h3*/
 
-            @include sp{
-                margin-bottom: 35px;
-            }
+      .story-part{
+        letter-spacing: 0.1em;
+        line-height: 2;
+        color: white;
+        font-size: 15px;
 
-            @include sp{
-                margin-bottom: 25px;
-            }
+        @include tab{
+        font-size: 13px;
+        }
 
-            p{
-                font-size: 18px;
-                letter-spacing: 0.1em;
-                padding-bottom: 13px;
-                font-weight: bold;
+        @include sp-second(){
+          font-size: 3.6vw;
+          }
+  
 
-                @include sp{
-                    font-size: 16px;
-                }
+      }
 
-                @include sp-second{
-                    padding-bottom: 10px;
-                    font-size: 14px;
-                }
-                
+      h4{
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+        margin-top: 2vw;
+        text-align: right;
+        letter-spacing: 0.4em;
 
-                span{
-                    font-size: 10px;
-                    background-color: #FFEB52;
-                    padding: 5px 7px;
-                    border-radius: 3px;
-                    margin-right: 6.5px;
-                }/*span*/
-            }/*p*/
-            input{
-                border: 1px solid black;
-                width: 576px;
-                height: 78px;
-                border-radius: 6px;
-                padding: 10px 20px;
-                @include tab{
-                    width: 530px;
-                }
+        @include tab{
+          font-size: 18px;
+        }
+      }
+    }/*item-box*/
+    }/*wood-item*/
 
-                @include sp{
-                    width: 410px;
-                    height: 40px;
-                    padding: 10px 10px;
-                }
+    .wood-item.active{
+      opacity: 1;
+      transform: translate(0, 0);  
+    }
 
-                @include sp-second{
-                    width: 300px;
-                    height: 30px;
-                }
+    
+
+  }/*wrap*/
+}/*introduction*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.works{
+  padding-bottom: 130px;
+
+  @include sp{
+    padding-bottom: 0px;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 65px;
+    @include font-type;
+    font-weight: 800;
+
+
+    @include sp{
+      font-size: 3em;
+      margin-bottom: 45px;
+    }
+
+    @include sp-second(){
+      font-size: 2.5em;
+    }
+
+  }
+
+  &-wrap{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @include sp{
+      display: block;
+    }
+
+    .works-item{
+      text-align: center;
+      margin-bottom: 60px;
+      opacity : 0;
+      transform : translate(0, 50px);
+      transition : all 1.3s;
+      transform: scale(0.6);
+
+
+      @include sp{
+        margin-bottom: 30px;
+      }
+
+      img{
+        width: 41vw;/*575*/
+        height: 26vw;/*365*/
+        margin-right: 15px;
+        margin-left: 15px;
+
+
+        @include tab{
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+    
+
+      @include sp{
+          width: 80%;/*575*/
+          height: 50vw;/*365*/
+      }
+    
+
+
+      }/*img*/
+    }/*works-item*/
+
+
+    .works-item.active{
+      opacity: 1;
+      transform: translate(0, 0);  
+      transform: scale(1);    
+  }
+  
+
+    h4{
+      font-weight: 800;
+
+      @include font-type;
+      font-size: 30px;
+
+      @include pc{
+        font-size: 3.1vw;
+      }
+
+      @include sp{
+        font-size: 6vw;
+      }
+
+      .item-name-jp{
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
         
+        @include pc{
+          font-size: 2.6vw;
+        }
 
-            }
+        @include sp{
+          font-size: 5vw;
+        }
+      }/*.item-name-jps*/
 
-            .text-content{
-                height: 250px;
-                margin-bottom: 65px;
+      .item-name-jp::before {
+        content: "/ ";
+      }/*.item-name-jp*/
+    }
+  }/*wrap*/
 
-                @include sp{
-                    margin-bottom: 25px;
-                }
-
-                @include sp-second{
-                    height: 150px;
-                }
-
-
-            }
-
-        }/*text-area*/
-
-        .btn_area{
-            background-color: #FFDB41;
-            width: 240px;
-            text-align: center;
-            padding: 25px 90px;
-            border-radius: 6px;
-            margin: 0 auto;
-            font-weight: bold;
-
-
-
-            @include sp{
-                padding: 15px 40px;
-                width: 180px;
-            }
-
-            input{
-              letter-spacing: 1.2em;
-              font-size: 18px;
-              font-family: 'Noto Sans JP', sans-serif;
-            }
-         
-        }/*btn_area*/
-    }/*form*/
-
-}/*contact*/
-
-
-
-
-
+}
 
 
 
@@ -1224,6 +1516,7 @@ table.active{
 }
 
 
+
 .footer{
   background-image: url(../img/bottom-background.png);
     background-size: cover;
@@ -1321,7 +1614,8 @@ table.active{
         transition: 1s;
       }
   
-      .f-nav-privacy{
+      .f-nav-privacy{  background-image: url(../img/bottom-background.png);
+
         font-size: 20px;
         font-weight: bold;
   

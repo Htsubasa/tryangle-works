@@ -549,7 +549,7 @@ header{
 
 .works{
     .logo-list{
-        width: 80%;
+        width: 84%;
         display: flex;
         margin: 0 auto;
         justify-content: space-around;
@@ -571,10 +571,11 @@ header{
         .logo-item{
             background-color: #EFEFEF;
             border-radius: 50%;
-            width: 17%;
-            height: 14.1vw;
+            width: 17.6%;
+            height: 15vw;
             text-align:center;
             position: relative;
+            cursor: pointer;
 
             opacity : 0;
             transform : translate(0, 50px);
@@ -614,12 +615,12 @@ header{
                 top: 40%;                    /* 親要素の半分下にずらす */
                 left: 50%;                   /* 親要素の半分右にずらす */
                 transform: translateY(-50%) translateX(-50%);    /* 要素自体の半分、上と左にずらす */                
-                width: 50%;
+                width: 45%;
             }
             p{
                 font-size: 1.3vw;
                 position: absolute;          /* 位置指定 */
-                top: 75%;                    /* 親要素の半分下にずらす */
+                top: 70%;                    /* 親要素の半分下にずらす */
                 left: 50%;                   /* 親要素の半分右にずらす */
                 transform: translateY(-50%) translateX(-50%);    
                 width: 60%;
@@ -645,6 +646,10 @@ header{
       transform: translate(0, 0);  
       transform: scale(1);    
   }
+
+  .logo-item.is-active{
+    transition: all 0.2s ease-out;
+}
   
 
         .logo-item:nth-child(2){
@@ -663,6 +668,8 @@ header{
     text-align: center;
     margin-bottom:120px;
     margin-top: 70px;
+    display:none;
+
 
     @include pc{
         margin-bottom:70px;
@@ -688,7 +695,7 @@ header{
 
         .sub-h2{
             font-size: 33px;
-            font-weight: normal;
+            font-weight: bold;
             font-family: 'Noto Sans JP', sans-serif;
             position: relative;    
             display: inline-block;
@@ -765,6 +772,10 @@ header{
     }
 
 }/*title-part*/
+
+.title-part.is-show{
+  display:block;
+}
 
 
 .gallery{
@@ -846,21 +857,7 @@ margin-top: 50px;
 }/*&-wrap*/
 
 }/*#gallery*/
-
-
-
 }/*works*/
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1166,7 +1163,7 @@ table{
  
     .sub-price{
       font-size: 1.7vw;/*24*/
-      font-weight: normal;
+      font-weight: bold;
       letter-spacing: 0.075em;
 
       @include pc{
@@ -1279,19 +1276,13 @@ table.active{
     display: initial;
 
   }
-  
-
   }
-
 }
 
 
 
-
-
-
 .footer{
-  background-image: url(../img/footer-background.png);
+  background-image: url(../img/bottom-background.png);
   background-size: cover;
   position: relative;
   padding-bottom: 90px;
@@ -1389,7 +1380,7 @@ table.active{
 
     .f-nav-privacy{
       font-size: 20px;
-      font-weight: normal;
+      font-weight: bold;
 
       @include pc{
         font-size: 0.9em;
