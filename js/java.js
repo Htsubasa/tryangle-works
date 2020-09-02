@@ -190,3 +190,75 @@ $(window).scroll(function (){
           }
       });
     });
+
+    $(window).scroll(function (){
+      $('.wood-item').each(function(){
+          var elemPos = $(this).offset().top,
+              scroll = $(window).scrollTop(),
+              windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 250){
+                $(this).addClass('active');
+        }
+      });
+    });
+
+    $(window).scroll(function (){
+      $('.introduction-img').each(function(){
+          var elemPos = $(this).offset().top,
+              scroll = $(window).scrollTop(),
+              windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 250){
+                $(this).addClass('active');
+        }
+      });
+    });
+
+    $(window).scroll(function (){
+      $('.career-intro').each(function(){
+          var elemPos = $(this).offset().top,
+              scroll = $(window).scrollTop(),
+              windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 250){
+                $(this).addClass('active');
+        }
+      });
+    });
+
+     
+
+    $(window).scroll(function (){
+      $('.profile-img').each(function(){
+          var elemPos = $(this).offset().top,
+              scroll = $(window).scrollTop(),
+              windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 250){
+                $(this).addClass('active');
+        }
+      });
+    });
+
+
+  $(window).scroll(function (){
+      $('.yellow-name').each(function(){
+          var elemPos = $(this).offset().top,
+              scroll = $(window).scrollTop(),
+              windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 750){
+                $(this).addClass('active');
+        }
+      });
+  });
+
+
+  jQuery(function($){
+    $('.logo-item').click(function(){
+        $('.is-active').removeClass('is-active');
+        $(this).addClass('is-active');
+        $('.is-show').removeClass('is-show');
+            // クリックしたタブからインデックス番号を取得
+        const index = $(this).index();
+            // クリックしたタブと同じインデックス番号をもつコンテンツを表示
+        $('.title-part').eq(index).addClass('is-show');
+      });
+  });
+
